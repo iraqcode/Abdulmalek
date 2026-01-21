@@ -28,7 +28,7 @@ interface Course {
   quizzes: Quiz[];
 }
 
-const API_URL = Constants.expoConfig?.extra?.EXPO_BACKEND_URL || 
+const API_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 
   (Platform.OS === 'web' ? '' : 'http://localhost:8001');
 
 export default function QuizScreen() {
