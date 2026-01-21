@@ -29,16 +29,8 @@ interface Course {
   total_lessons: number;
 }
 
-const API_URL = Constants.expoConfig?.extra?.EXPO_PUBLIC_BACKEND_URL || 
+const API_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 
   (Platform.OS === 'web' ? '' : 'http://localhost:8001');
-
-// For web, API calls go through the same origin with /api prefix
-const getApiUrl = () => {
-  if (Platform.OS === 'web') {
-    return '';  // API routes are proxied
-  }
-  return process.env.EXPO_PUBLIC_BACKEND_URL || 'http://localhost:8001';
-};
 
 export default function HomeScreen() {
   const router = useRouter();
