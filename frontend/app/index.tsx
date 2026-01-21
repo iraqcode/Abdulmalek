@@ -95,7 +95,7 @@ export default function HomeScreen() {
     <View style={styles.header}>
       <View style={styles.logoContainer}>
         <Image
-          source={require('../assets/logo.jpg')}
+          source={{ uri: 'https://customer-assets.emergentagent.com/job_0fe61bb9-489d-480d-b866-06bdd4cbbbaf/artifacts/fjmaqzde_photo_5440527991625683214_y.jpg' }}
           style={styles.logo}
           resizeMode="cover"
         />
